@@ -21,7 +21,4 @@ ln -sf /run /var/run
 # rpm-ostree install vlc
 
 #### Example for enabling a System Unit File
-
-ln -s /usr/share/containers/systemd/portainer.container /usr/lib/bootc/bound-images.d/portainer.container
-
 systemctl enable podman.socket
