@@ -2,7 +2,10 @@
 
 set -ouex pipefail
 
-RELEASE="$(rpm -E %fedora)"
+# See https://github.com/centos-workstation/achillobator/issues/3
+mkdir -m 0700 -p /var/roothome
+# Fast track https://gitlab.com/fedora/bootc/base-images/-/merge_requests/71
+ln -sf /run /var/run
 
 
 ### Install packages
@@ -18,7 +21,4 @@ RELEASE="$(rpm -E %fedora)"
 # rpm-ostree install vlc
 
 #### Example for enabling a System Unit File
-
-ln -s /usr/share/containers/systemd/portainer.container /usr/lib/bootc/bound-images.d/portainer.container
-
 systemctl enable podman.socket
