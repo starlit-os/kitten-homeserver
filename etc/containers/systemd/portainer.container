@@ -1,0 +1,17 @@
+[Container]
+Image=docker.io/portainer/portainer-ce:alpine
+ContainerName=portainer
+AutoUpdate=registry
+#Notify=true
+LogDriver=journald
+
+PublishPort=9443:9443
+PublishPort=9000:9000
+Volume=/usr/lib/systemd/system/podman.socket:/var/run/docker.sock:Z
+GlobalArgs=--storage-opt=additionalimagestore=/usr/lib/bootc/storage
+
+[Service]
+Restart=on-success
+
+[Install]
+WantedBy=default.target
