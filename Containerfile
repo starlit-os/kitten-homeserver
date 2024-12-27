@@ -6,4 +6,4 @@ COPY etc /etc
 
 RUN mkdir -p /var/lib/alternatives && \
     /tmp/build.sh && \
-    ostree container lint
+    bootc container lint
