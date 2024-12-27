@@ -8,6 +8,7 @@ LogDriver=journald
 PublishPort=9443:9443
 PublishPort=9000:9000
 Volume=/run/user/1000/podman/podman.sock:/var/run/docker.sock:Z
+GlobalArgs=--storage-opt=additionalimagestore=/usr/lib/bootc/storage
 
 [Service]
 Restart=on-success
