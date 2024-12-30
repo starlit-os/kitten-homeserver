@@ -1,4 +1,4 @@
-FROM quay.io/centos-bootc/centos-bootc:stream10
+FROM ghcr.io/ublue-os/ccos:latest
 
 COPY build.sh /tmp/build.sh
 
