@@ -1,3 +1,9 @@
+[Unit]
+Description=Portainer Container
+After=local-fs.target 
+Wants=network-online.target 
+After=network-online.target
+
 [Container]
 Image=docker.io/portainer/portainer-ce:2.23.0
 ContainerName=portainer
