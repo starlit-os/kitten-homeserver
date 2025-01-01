@@ -16,3 +16,6 @@ Restart=on-success
 
 [Install]
 WantedBy=default.target
+
+[Volume]
+VolumeName=portainer-data
