@@ -17,3 +17,4 @@ dnf install -y cockpit
 
 systemctl enable podman.socket
 systemctl enable cockpit.socket
+systemctl disable auditd.service
