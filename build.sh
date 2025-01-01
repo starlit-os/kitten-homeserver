@@ -11,7 +11,7 @@ ln -sr /etc/containers/systemd/*.container /usr/lib/bootc/bound-images.d/
 
 # Packages
 
-dnf install -y cockpit
+dnf install -y cockpit cockpit-machines cockpit-podman cockpit-files
 
 # Services
 
