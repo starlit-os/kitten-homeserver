@@ -16,4 +16,4 @@ dnf5 install -y cockpit
 # Services
 
 systemctl enable podman.socket
-systemctl enable --now cockpit.socket
+systemctl enable cockpit.socket
