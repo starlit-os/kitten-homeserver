@@ -5,7 +5,7 @@ Wants=network-online.target
 After=network-online.target
 
 [Container]
-Image=docker.io/portainer/portainer-ce:2.23.0
+Image=docker.io/portainer/portainer-ce:alpine-sts
 ContainerName=portainer
 AutoUpdate=registry
 #Notify=true
