@@ -9,6 +9,7 @@ PublishPort=9443:9443
 PublishPort=9000:9000
 Volume=/run/podman/podman.sock:/var/run/docker.sock:Z
 Volume=portainer_data:/data
+PodmanArgs=--privileged
 
 [Service]
 Restart=on-success
