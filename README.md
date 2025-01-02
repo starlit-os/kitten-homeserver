@@ -1,6 +1,29 @@
-# Portainer
+# Portainer Home Server
 
-A [portainer](https://www.portainer.io/) applicance built with CentOS Stream10 and a portainer [logically bound image](https://containers.github.io/bootc/logically-bound-images.html).
+- Based on CentOS Stream9, built with bootc
+- [portainer](https://www.portainer.io/)
+- [cockpit](https://cockpit-project.org/)
+- [tailscale](https://tailscale.com) 
+
+## Download ISO
+
+- [Download the ISO](https://download.projectbluefin.io/server.iso)
+
+Then follow the installation instructions, remember to set up networking in the installer before continuing with the installation!
+
+## Usage
+
+After first boot:
+
+- `https://<ipaddress>:9090` - access the system maintenance webui, login with your username and password.
+- `https://<ipaddress>:9443` - access the portainer webui
+
+Tailscale is available via the `tailscale` command.
+
+## TODO (PRs welcomed!)
+
+- Let's Encrypt setup
+- Update service units
 
 ## Build ISO
 
