@@ -11,7 +11,7 @@ ln -sr /etc/containers/systemd/*.container /usr/lib/bootc/bound-images.d/
 
 # Packages
 
-dnf install -y cockpit cockpit-machines cockpit-podman cockpit-files
+dnf install -y cockpit cockpit-machines cockpit-podman cockpit-files libvirt
 
 # Tailscale
 dnf config-manager --add-repo https://pkgs.tailscale.com/stable/centos/9/tailscale.repo
