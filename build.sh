@@ -23,5 +23,6 @@ dnf -y --enablerepo tailscale-stable install \
 
 systemctl enable podman.socket
 systemctl enable cockpit.socket
+systemctl enable rpm-ostreed-automatic.service 
 systemctl enable tailscaled.service
 systemctl disable auditd.service
