@@ -1,6 +1,7 @@
 # Portainer Home Server
 
-- Based on CentOS Stream9, built with bootc
+An example of an appliance built with bootc. Designed for your friend who wants a home server with a webui, and tailscale in case they need you to go fix something. 😄
+
 - [portainer](https://www.portainer.io/)
 - [cockpit](https://cockpit-project.org/)
 - [tailscale](https://tailscale.com) 
