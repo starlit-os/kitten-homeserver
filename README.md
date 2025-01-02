@@ -1,6 +1,6 @@
 # Portainer Home Server
 
-An example of an appliance built with bootc. Designed for your friend who wants a home server with a webui, and tailscale in case they need you to go fix something. 😄
+An example of an appliance built with bootc. Designed for your friend who wants a home server with a webui, and tailscale in case they _need you_ to go fix something. 😄 This is based on Universal Blue's [ccos](https://github.com/ublue-os/ccos) base image, which brings in CoreOS features.
 
 - [portainer](https://www.portainer.io/)
 - [cockpit](https://cockpit-project.org/)
