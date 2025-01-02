@@ -23,7 +23,6 @@ Tailscale is available via the `tailscale` command.
 ## TODO (PRs welcomed!)
 
 - Let's Encrypt setup
-- Update service units (run `bootc upgrade` manually for now)
 
 ## Build ISO
 
