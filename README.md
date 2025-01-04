@@ -24,6 +24,7 @@ Tailscale is available via the `tailscale` command.
 ## TODO (PRs welcomed!)
 
 - Let's Encrypt setup
+- Magical DNS things to make it easy to run as a home server
 
 ## Build ISO
 
