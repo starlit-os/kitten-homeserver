@@ -11,7 +11,11 @@ ln -sr /etc/containers/systemd/*.container /usr/lib/bootc/bound-images.d/
 
 # Packages
 
-dnf install -y cockpit cockpit-machines cockpit-podman cockpit-files libvirt tmux vim
+dnf install -y cockpit cockpit-machines cockpit-podman cockpit-files libvirt tmux vim firewalld
+
+# Docker install: https://docs.docker.com/engine/install/centos/#install-using-the-repository
+dnf config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo
+dnf install -y docker-ce docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
 
 # Tailscale
 dnf config-manager --add-repo https://pkgs.tailscale.com/stable/centos/9/tailscale.repo
@@ -26,3 +30,4 @@ systemctl enable cockpit.socket
 systemctl enable rpm-ostreed-automatic.timer 
 systemctl enable tailscaled.service
 systemctl disable auditd.service
+systemctl enable docker.service
