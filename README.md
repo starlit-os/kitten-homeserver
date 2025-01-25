@@ -26,6 +26,10 @@ Tailscale is available via the `tailscale` command.
 - Let's Encrypt setup
 - Magical DNS things to make it easy to run as a home server
 
+## Reference Material
+
+- https://developers.redhat.com/articles/2025/01/21/how-image-mode-rhel-simplifies-software-appliances#
+
 ## Build ISO
 
 Clone this repo then run this to build an iso: 
