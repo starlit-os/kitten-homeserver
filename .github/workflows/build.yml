@@ -5,21 +5,21 @@ on:
     branches:
       - main
   schedule:
-    - cron: '05 10 * * *'  # 10:05am UTC everyday
-  merge_group:  
+    - cron: "05 10 * * *" # 10:05am UTC everyday
+  merge_group:
   push:
     branches:
       - main
     paths-ignore:
-      - '**/README.md'
+      - "**/README.md"
   workflow_dispatch:
 
 env:
-  IMAGE_NAME: "homeserver"
+  IMAGE_NAME: "kitten-homeserver"
   IMAGE_DESC: "CentOS Stream-based Homeserver-focused image"
   IMAGE_REGISTRY: "ghcr.io/${{ github.repository_owner }}"
   DEFAULT_TAG: "latest"
-  CENTOS_VERSION: "stream9"
+  CENTOS_VERSION: "10-kitten"
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref || github.run_id }}
@@ -38,7 +38,7 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4
-      
+
       - name: Get current date
         id: date
         run: |
