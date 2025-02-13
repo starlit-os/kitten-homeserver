@@ -42,6 +42,9 @@ dnf -y remove \
 # enable systemd-resolved for proper name resolution
 systemctl enable systemd-resolved.service
 
-# Copy ucore workaround files
+# Copy ucore workaround services and enable them
 cp /tmp/ucore/systemd/system/{libvirt,swtpm}-workaround.service /usr/lib/systemd/system/
 cp /tmp/ucore/tmpfiles/{libvirt,swtpm}-workaround.conf /usr/lib/tmpfiles.d/
+mkdir /usr/local/bin/overrides
+systemctl enable libvirt-workaround.service
+systemctl enable swtpm-workaround.service

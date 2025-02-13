@@ -29,8 +29,6 @@ systemctl enable tailscaled.service
 systemctl enable docker.service
 systemctl enable docker.socket
 systemctl disable rpm-ostree-countme.timer
-systemctl enable libvirt-workaround.service
-systemctl enable swtpm-workaround.service
 
 # Don't automatically restart when autoupdating.
 sed -i 's/ --apply//' /usr/lib/systemd/system/bootc-fetch-apply-updates.service
