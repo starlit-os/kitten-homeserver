@@ -9,6 +9,8 @@ COPY build-base.sh /tmp/build.sh
 RUN --mount=type=bind,from=config,src=/rpms,dst=/tmp/rpms/config \
     --mount=type=bind,from=ucore,src=/usr/lib/systemd,dst=/tmp/ucore/systemd \
     --mount=type=bind,from=ucore,src=/usr/lib/tmpfiles.d,dst=/tmp/ucore/tmpfiles \
+    --mount=type=bind,from=ucore,src=/etc,dst=/tmp/ucore/etc \
+    --mount=type=bind,from=ucore,src=/usr/sbin,dst=/tmp/ucore/sbin \
     /tmp/build.sh && \
     dnf clean all && \
     ostree container commit
