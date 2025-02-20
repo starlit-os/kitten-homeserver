@@ -16,10 +16,10 @@ on:
 
 env:
   IMAGE_NAME: "kitten-homeserver"
-  IMAGE_DESC: "CentOS Stream-based Homeserver-focused image"
+  IMAGE_DESC: "Fedora-based Homeserver-focused image"
   IMAGE_REGISTRY: "ghcr.io/${{ github.repository_owner }}"
-  DEFAULT_TAG: "latest"
-  CENTOS_VERSION: "10-kitten"
+  DEFAULT_TAG: "fedora-latest"
+  CENTOS_VERSION: "41"
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref || github.run_id }}

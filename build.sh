@@ -10,12 +10,12 @@ dnf install -y \
     usbutils
 
 # Docker install: https://docs.docker.com/engine/install/centos/#install-using-the-repository
-dnf config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo
+dnf config-manager addrepo --from-repofile=https://download.docker.com/linux/fedora/docker-ce.repo
 dnf install -y docker-ce docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
 
 # Tailscale
-dnf config-manager --add-repo https://pkgs.tailscale.com/stable/centos/9/tailscale.repo
-dnf config-manager --set-disabled tailscale-stable
+dnf config-manager addrepo --from-repofile=https://pkgs.tailscale.com/stable/fedora/tailscale.repo
+dnf config-manager setopt tailscale-stable.enabled=0
 dnf -y --enablerepo tailscale-stable install \
   tailscale
 

@@ -1,5 +1,5 @@
 # Build the homeserver image
-FROM ghcr.io/starlit-os/kittencore:latest
+FROM ghcr.io/starlit-os/kittencore:fedora-latest
 
 COPY build.sh /tmp/build.sh
 COPY etc /etc
